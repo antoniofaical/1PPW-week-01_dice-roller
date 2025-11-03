@@ -5,6 +5,8 @@
 > Version: 1.0  
 > Author: Antonio Elias Faiçal Jr.
 
+---
+
 ## Features
 
 - Command-line utility for rolling RPG-style dice.
