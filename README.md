@@ -1,99 +1,60 @@
-# Dice Roller CLI
+# CLI Dice Roller
 
-Um pequeno projeto Python que simula rolagens de dados de RPG diretamente pelo terminal.  
-Permite múltiplas expressões no formato `XdY`, como `2d6 + 1d8`, com totalização automática e interface simples.
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
+
+## Features
+
+- Command-line utility for rolling RPG-style dice.
+- Supports multiple dice expressions like `2d6 + 1d8`.
+- Built-in validation for standard dice types: d4, d6, d8, d10, d12, d20.
+- Outputs individual rolls, grouped by expression, with total sums.
+- Clear and user-friendly terminal interface.
 
 ---
 
-## Demonstração
+## Requirements
+
+- Python 3.7 or later  
+- No external libraries required (uses Python’s built-in `random` module)
+
+---
+
+## How to Use
+
+Run the script using Python:
 
 ```bash
-$ python dice_roller.py
-----------------------------------------------------------------------------------------------------
-Welcome to the Dice Roller! This program helps you quickly roll RPG dice!
-Valid dice:
-    [d4, d6, d8, d10, d12, d20]
-Usage examples:
-    Roll 2 four-sided dice →  '2d4'
-    Roll 1 six-sided and 1 eight-sided die →  '1d6 + 1d8'
-----------------------------------------------------------------------------------------------------
-
-Enter the dice to roll (Ctrl+C to exit): 2d6 + 1d8
-
-2d6: [3, 5] (sum = 8)
-1d8: [7] (sum = 7)
-----------------------------------------------------------------------------------------------------
-```
-
----
-
-## Funcionalidades
-
-- Aceita múltiplas expressões separadas por `+`
-- Valida formatos incorretos e tipos de dados inválidos
-- Suporta abreviação (`d6` = `1d6`)
-- Interface de terminal com instruções e separadores visuais
-- Saída formatada com resultados individuais e soma total
-- Encerramento elegante via `Ctrl+C`
-
----
-
-## Aprendizados e tecnologias
-
-Este projeto foi criado como parte da iniciativa **“1 Projeto por Semana”**, com foco em aprendizado incremental.  
-Conceitos aplicados:
-- Manipulação de strings e parsing de expressões
-- Estrutura de funções e modularização de código
-- Uso de bibliotecas padrão (`random`)
-- Laços, condicionais e tratamento de erros (`try/except`)
-- Boas práticas de UX em aplicações CLI
-
----
-
-## Execução
-
-### Pré-requisitos
-- Python 3.8 ou superior
-
-### Rodando localmente
-```bash
-git clone https://github.com/antoniofaical/dice-roller.git
-cd dice-roller
 python dice_roller.py
 ```
 
----
+You’ll see a welcome message and usage instructions.
 
-## Histórico de desenvolvimento
+Examples:
 
-| Etapa | Commit | Descrição |
-|:--:|:--|:--|
-| 1 | `initial draft: basic dice roller logic` | Primeira versão funcional simples |
-| 2 | `add support for multiple dice expressions and validation` | Parsing de múltiplos dados e checagem de entrada |
-| 3 | `improve user interface and add friendly messages` | Interface amigável e loop contínuo |
-| 4 | `refactor parsing and add support for single ‘d6’ format` | Parsing limpo e abreviação “d6” |
-| 5 | `final polish: docstrings, constants, and graceful exit handling` | Código final limpo e documentado |
+- To roll two d4 dice:
+  ```
+  2d4
+  ```
 
----
+- To roll one d6 and one d8:
+  ```
+  1d6 + 1d8
+  ```
 
-## Próximos passos (futuro)
+- To roll just a single d20 (you can omit the number 1):
+  ```
+  d20
+  ```
 
-- Adicionar modificadores (`2d6 + 3`)
-- Implementar modo histórico de rolagens
-- Suporte a execução via argumentos de linha de comando (`python dice_roller.py "2d6+1d8"`)
-- Testes unitários com `pytest`
-- Publicar como pacote `pip` minimalista
-
----
-
-## Autor
-
-**Antonio Elias Faiçal Jr.**  
-Engenheiro e desenvolvedor com foco em Python, C++, web e eletrônica aplicada.  
-🔗 [LinkedIn](https://www.linkedin.com/in/antoniofaical)  
-💻 [GitHub](https://github.com/antoniofaical)
+To quit the program at any time, press `Ctrl+C`.
 
 ---
 
-## Licença
-Este projeto é de uso livre para fins educacionais.
+## License
+
+This repository — including all documentation, descriptions, and educational materials —  
+is distributed under the  
+[**Creative Commons Attribution–NonCommercial 4.0 International License (CC BY-NC 4.0)**](https://creativecommons.org/licenses/by-nc/4.0/).
+
+You are welcome to study, share, and adapt the content for learning purposes.  
+Commercial use is not permitted without explicit permission.
